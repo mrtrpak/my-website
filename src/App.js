@@ -1,5 +1,9 @@
-import axios from 'axios';
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import axios from 'axios';
+
+import HomePage from './pages/home';
+import SoccerPage from './pages/soccer';
 
 export default function App() {
   let [standings, setStandings] = React.useState(null);
@@ -20,7 +24,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Fetching Data with React Hooks</h1>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={HomePage} />
+          <Route exact path="/soccer" element={SoccerPage} />
+        </Routes>
+      </Router>
     </div>
   );
 };
