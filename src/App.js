@@ -26,8 +26,8 @@ export default function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path="/" element={HomePage} />
-          <Route exact path="/soccer" element={SoccerPage} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/soccer" element={<SoccerPage />} />
         </Routes>
       </Router>
     </div>
