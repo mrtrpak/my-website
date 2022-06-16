@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { ButtonGroup, Button } from '@mui/material';
 
-const soccerKey = process.env.soccerKey;
+const soccerKey = process.env.soccerKey || null;
 
 import SoccerHeader from './soccer-header';
 
