@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import SoccerHeader from './soccer-header';
 
 const soccerKey = process.env.soccerKey || null;
 
-import SoccerHeader from './soccer-header';
 
 export default function SoccerStandings() {
   let [league, setLeague] = React.useState("BL1");
@@ -12,7 +12,6 @@ export default function SoccerStandings() {
   console.log(league);
 
   React.useEffect(() => {
-    setLeagueFunc();
     axios({
       "url": `https://api.football-data.org/v2/competitions/${league}/standings`,
       "headers": {
